@@ -1,0 +1,86 @@
+#include <stdio.h>
+
+// Super Trunfo - Países
+// Cadastro das Cartas
+
+int main() {
+    printf(" **SUPER TRUNFO PAÍSES**\n");
+    printf("Siga o exemplo abaixo para criar suas cartas e começar a diversão\n");
+
+    char nome_do_estado[50] = "Pará";
+    char codigo_da_carta[4] = "A01"; //Sempre utilizar Letra + Número (Letras de A a H números de 01 a 99)
+    char nome_da_cidade[20] = "Santarém"; // Cidade pertencente ao estado informado
+    int populacao = 306480;
+    float area_em_km = 22887;
+    float pib = 6390000;
+    int numero_de_pontos_turisticos = 23;
+    float densidade_populacional = populacao / area_em_km;
+    float pib_per_capita = pib / populacao;
+
+    // Leitura do Exemplo
+    printf("*** CARTA 01***\n");
+
+    printf("Nome do Estado = %s \n", nome_do_estado);
+
+    printf("Código da carta = %s \n", codigo_da_carta);
+
+    printf("Nome da Cidade = %s \n", nome_da_cidade);
+
+    printf("População = %d \n", populacao);
+
+    printf("Area em KM² = %.2f \n", area_em_km);
+
+    printf("PIB = %.2f \n", pib);
+
+    printf("Numero de pontos turísticos = %d \n", numero_de_pontos_turisticos);
+
+    printf("Densidade Populacional = %.2f\n", densidade_populacional);
+
+    printf("PIB per Capita = %.2f\n", pib_per_capita);
+
+    printf("____________________________________________\n");
+    
+    // Area de interação com o usuário
+    printf("CRIE A SUA CARTA\n");
+
+    printf("DIGITE O NOME DE UM ESTADO:");
+    scanf("%s", nome_do_estado);  // Corrigido: não precisa de &
+
+    printf("DIGITE O CODIGO DA CARTA:"); // Utilizar letras de A a H e número de 01 a 99.
+    scanf("%s", codigo_da_carta);  // Corrigido: não precisa de &
+
+    printf("DIGITE O NOME DE UMA CIDADE:"); // Cidade existente no estado descrito anteriormente.
+    scanf("%s", nome_da_cidade);  // Corrigido: não precisa de &
+
+    printf("DIGITE A POPULAÇÃO DA CIDADE:");
+    scanf("%d", &populacao); 
+
+    printf("DIGITE A AREA EM KM:");
+    scanf("%f", &area_em_km);  
+
+    printf("DIGITE O PIB DA CIDADE:"); // O PIB em reais
+    scanf("%f", &pib); 
+
+    printf("DIGITE O NUMERO DE PONTOS TURISTICOS DA CIDADE:");
+    scanf("%d", &numero_de_pontos_turisticos);  
+
+    // Cálculo do PIB per capita e densidade populacional (deve ser feito após a leitura dos dados)
+    densidade_populacional = populacao / area_em_km;
+    pib_per_capita = pib / populacao;
+
+    printf("____________________________________________\n");
+
+    printf("**CARTA 03**\n");
+    // Conferir o Resultado
+    printf("Nome do Estado: %s\n", nome_do_estado);
+    printf("Código da carta = %s \n", codigo_da_carta);
+    printf("Nome da cidade: %s\n", nome_da_cidade);
+    printf("População: %d\n", populacao); 
+    printf("Area em KM = %.2f\n", area_em_km);
+    printf("PIB = %.2f\n", pib);
+    printf("Densidade Populacional = %.2f\n", densidade_populacional);
+    printf("PIB per Capita = %.2f\n", pib_per_capita);
+    printf("Numero de pontos turísticos = %d \n", numero_de_pontos_turisticos);
+
+    return 0;
+}
